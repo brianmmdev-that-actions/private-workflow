@@ -1,0 +1,13 @@
+name: Tis a secret handshake
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Why hello there...
+        uses: brianmmdev-that-actions/private-action@main
+        with:
+          name: Brian

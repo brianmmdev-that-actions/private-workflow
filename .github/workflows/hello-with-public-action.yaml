@@ -1,0 +1,13 @@
+name: Saying hello in private
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Why hello there...
+        uses: brianmmdev-that-actions/public-action@main
+        with:
+          name: Brian
