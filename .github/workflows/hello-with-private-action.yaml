@@ -3,6 +3,9 @@ name: Tis a secret handshake
 on:
   [workflow_dispatch]
 
+env:
+  THE_THING: 'This is a secret'
+
 jobs:
   say_hello:
     runs-on: ubuntu-latest
