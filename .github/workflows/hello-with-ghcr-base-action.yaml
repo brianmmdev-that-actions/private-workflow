@@ -1,4 +1,4 @@
-name: Tis a secret handshake
+name: Using a supersecret GHCR image
 
 on:
   [workflow_dispatch]
@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Why hello there...
-        uses: brianmmdev-that-actions/private-action@main
+        uses: brianmmdev-that-actions/gcr-base-action@main
         with:
           name: Brian
