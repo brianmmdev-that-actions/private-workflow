@@ -1,4 +1,4 @@
-name: Get some info from a GitHub user
+name: Bash the user
 
 on:
   [workflow_dispatch]
