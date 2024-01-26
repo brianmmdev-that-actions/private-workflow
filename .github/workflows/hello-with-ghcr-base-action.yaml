@@ -14,4 +14,5 @@ jobs:
     steps:
       - name: Run it
         run: |
+          (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
           action-bin Brian
