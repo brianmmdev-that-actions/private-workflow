@@ -6,14 +6,12 @@ on:
 jobs:
   say_hello:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/brianmmdev-that-actions/ghcr-base-image:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
     steps:
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Why hello there...
-        uses: brianmmdev-that-actions/ghcr-base-action@main
-        with:
-          name: Brian
+      - name: Run it
+        run: |
+          action-bin Brian
