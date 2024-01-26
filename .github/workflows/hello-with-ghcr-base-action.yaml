@@ -15,4 +15,7 @@ jobs:
       - name: Run it
         run: |
           (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+          ls /usr/bin
+      - name: Run it again
+        run: |
           action-bin Brian
