@@ -1,0 +1,16 @@
+name: Piping output from a Go action
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Why hello there...
+        uses: brianmmdev-that-actions/go-outputs-example@main
+        with:
+          name: Brian
+      - name: Echoing the name
+        run: |
+          echo "The name is ${{ steps.why_hello.outputs.outname }}"
