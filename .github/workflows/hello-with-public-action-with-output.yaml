@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Why hello there...
+        id: why_hello
         uses: brianmmdev-that-actions/go-outputs-example@main
         with:
           name: Brian
